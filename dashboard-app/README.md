@@ -5,8 +5,6 @@ A modern web dashboard application for educational tools and AI-powered lesson p
 ## Project Status
 
 **Current Phase:** Initial Setup & Foundation Components  
-**Version:** 0.1.0  
-**Last Updated:** January 2025
 
 ### Completed ✅
 - Project initialization with React + Vite
@@ -200,14 +198,3 @@ Standard npm scripts for development, building, and preview.
 - Backend integration is planned but not yet implemented
 - Authentication currently uses mock functions
 
----
-
-## Development Team
-
-Internal PACT + AI project
-
----
-
-## Version History
-
-- **0.1.0** (January 2025) - Initial setup, sidebar component, basic routing
