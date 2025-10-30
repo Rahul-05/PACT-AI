@@ -197,4 +197,3 @@ Standard npm scripts for development, building, and preview.
 - Icons sourced from Lucide React library
 - Backend integration is planned but not yet implemented
 - Authentication currently uses mock functions
-

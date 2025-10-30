@@ -1,0 +1,183 @@
+/* ==================== EDITOR COMPONENTS ==================== */
+
+/* Editor Container */
+.editor-container {
+  display: flex;
+  height: calc(100vh - 96px);
+  background: var(--bg-primary);
+  overflow: hidden;
+}
+
+/* Editor Panel (Left) */
+.editor-panel {
+  flex: 1;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-primary);
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Editor Toolbar - FIXED */
+.editor-toolbar {
+  height: 48px;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  gap: 8px;
+  background: var(--bg-primary);
+  border-bottom: 1px solid var(--border-primary);
+  flex-shrink: 0;
+}
+
+.editor-toolbar__group {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding-right: 8px;
+  border-right: 1px solid var(--border-primary);
+}
+
+.editor-toolbar__group:last-child {
+  border-right: none;
+}
+
+.editor-toolbar__button {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  background: transparent;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  color: #6b7280;
+}
+
+.editor-toolbar__button:hover {
+  background: #f3f4f6;
+  color: #111827;
+}
+
+.editor-toolbar__button:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.editor-toolbar__button--active {
+  background: #e5e7eb;
+  color: #111827;
+}
+
+.editor-toolbar__select {
+  height: 32px;
+  padding: 0 8px;
+  border: 1px solid var(--border-primary);
+  border-radius: 4px;
+  background: var(--bg-primary);
+  font-size: 14px;
+  color: #111827;
+  cursor: pointer;
+}
+
+/* Document Title - FIXED */
+.document-title {
+  padding: 24px 48px 16px 48px;
+  border: none;
+  outline: none;
+  font-size: 28px;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+  color: #111827;
+  background: var(--bg-primary);
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.document-title::placeholder {
+  color: #9ca3af;
+}
+
+/* Editor Content - SCROLLABLE */
+.editor-content {
+  flex: 1;
+  padding: 0 48px 48px 48px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: var(--bg-primary);
+}
+
+.ProseMirror {
+  outline: none;
+  min-height: 100%;
+}
+
+.ProseMirror p {
+  font-size: 16px;
+  line-height: 1.75;
+  color: #111827;
+  margin-bottom: 16px;
+}
+
+.ProseMirror p.is-editor-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: #9ca3af;
+  pointer-events: none;
+  height: 0;
+}
+
+.ProseMirror strong {
+  font-weight: 600;
+}
+
+.ProseMirror em {
+  font-style: italic;
+}
+
+.ProseMirror u {
+  text-decoration: underline;
+}
+
+.ProseMirror s {
+  text-decoration: line-through;
+}
+
+.ProseMirror h1 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #111827;
+}
+
+.ProseMirror h2 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: #111827;
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+  padding-left: 24px;
+  margin-bottom: 16px;
+}
+
+.ProseMirror li {
+  margin-bottom: 8px;
+}
+
+.ProseMirror a {
+  color: #2563eb;
+  text-decoration: underline;
+}
+
+.ProseMirror img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 16px 0;
+}

@@ -7,6 +7,7 @@ import MyLessons from './pages/MyLessons'
 import Classrooms from './pages/Classrooms'
 import Support from './pages/Support'
 import NotFound from './pages/NotFound'
+import LessonPlanWorkspace from './pages/LessonPlanWorkspace/LessonPlanWorkspace'
 import useAuthStore from './store/authStore'
 
 // Protected Route Component
@@ -33,6 +34,14 @@ function AppRouter() {
         element={
           <ProtectedRoute>
             <Dashboard />
+          </ProtectedRoute>
+        }
+      />
+      <Route
+        path="/lesson-plan-workspace/:id"
+        element={
+          <ProtectedRoute>
+            <LessonPlanWorkspace />
           </ProtectedRoute>
         }
       />

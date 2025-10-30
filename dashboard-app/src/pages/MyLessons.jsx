@@ -1,8 +1,12 @@
 import Layout from '../components/layout/Layout'
 
 function MyLessons() {
+  const breadcrumbs = [
+    { label: 'My Lessons', path: null }
+  ]
+
   return (
-    <Layout>
+    <Layout breadcrumbs={breadcrumbs}>
       <div className="min-h-screen flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-hero font-semibold text-text-primary mb-4">
